@@ -30,7 +30,7 @@ jobs:
         run: gcc expo/expo.c -lm -o sdo-expo
 
       - name: Run an example program
-        run: ./sdo-expo 2 10
+        run: ./sdo-expo 2^10
 
       - name: Run application test
         run: |
