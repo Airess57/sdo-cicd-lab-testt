@@ -29,6 +29,16 @@ jobs:
       - name: Compile C application
         run: gcc expo/expo.c -lm -o sdo-expo
 
+      - name: Run an example program
+        run: ./sdo-expo 2 10
+
+      - name: Run application test
+        run: |
+              output=$(./sdo-expo 2 10)
+              echo “Output: $output”
+              test “$output” = “2 ^ 10 = 1024”
+
+
       # TASK 1.1: Add your functional test step here.
 
   # ============================================================
